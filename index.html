@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            let expression ='';
+            let history='';
+
+            function updateExpression(value) {
+                if (expression === '0')
+                    expression = ''; // Reset if initial value is 0
+                expression += value;
+                updateDisplay();
+            }
+
+             function clearExpression() {
+                history='';
+                expression = '';
+                updateDisplay();
+            }
+
+            function calculate() {
+                try {
+                // Safely evaluate the expression
+                history = expression
+                expression = eval(expression).toString();
+                } catch (error) {
+                    expression = 'Error';
+                }
+                updateDisplay();
+            }
+            function updateDisplay() {
+                document.getElementById('history').textContent = history || '';
+                document.getElementById('expression').textContent = expression || '0';
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <div class="calculator-container">
+            <div class="display">
+                <p id='history'></p>
+                <p id='expression'>0</p>
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="updateExpression('7')">7</button>
+                <button type="button" onclick="updateExpression('8')">8</button>
+                <button type="button" onclick="updateExpression('9')">9</button>
+                <button type="button" onclick="updateExpression('/')">/</button>
+                <button type="button" onclick="updateExpression('4')">4</button>
+                <button type="button" onclick="updateExpression('5')">5</button>
+                <button type="button" onclick="updateExpression('6')">6</button>
+                <button type="button" onclick="updateExpression('*')">*</button>
+                <button type="button" onclick="updateExpression('1')">1</button>
+                <button type="button" onclick="updateExpression('2')">2</button>
+                <button type="button" onclick="updateExpression('3')">3</button>
+                <button type="button" onclick="updateExpression('-')">-</button>
+                <button type="button" onclick="updateExpression('.')">.</button>
+                <button type="button" onclick="updateExpression('0')">0</button>
+                <button type="button" onclick="clearExpression()">C</button>
+                <button type="button" onclick="updateExpression('+')">+</button>
+                <button type="button" onclick="calculate()">=</button>
+                
+            </div>
+        </div>
+    </body>
+</html>
