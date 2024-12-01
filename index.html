@@ -15,24 +15,32 @@
                 <p id='expression'>0</p>
             </div>
             <div class="buttons">
-                <button type="button" onclick="updateExpression('7')">7</button>
-                <button type="button" onclick="updateExpression('8')">8</button>
-                <button type="button" onclick="updateExpression('9')">9</button>
-                <button type="button" onclick="updateExpression('/')">/</button>
-                <button type="button" onclick="updateExpression('4')">4</button>
-                <button type="button" onclick="updateExpression('5')">5</button>
-                <button type="button" onclick="updateExpression('6')">6</button>
-                <button type="button" onclick="updateExpression('*')">*</button>
-                <button type="button" onclick="updateExpression('1')">1</button>
-                <button type="button" onclick="updateExpression('2')">2</button>
-                <button type="button" onclick="updateExpression('3')">3</button>
-                <button type="button" onclick="updateExpression('-')">-</button>
-                <button type="button" onclick="updateExpression('.')">.</button>
-                <button type="button" onclick="updateExpression('0')">0</button>
-                <button type="button" onclick="clearExpression()">C</button>
-                <button type="button" onclick="updateExpression('+')">+</button>
-                <button type="button" onclick="calculate()">=</button>
-                
+                <button onclick="updateExpression('(')">(</button>
+                <button onclick="updateExpression(')')">)</button>
+                <button onclick="clearExpression()">C</button>
+                <button onclick="backspace()">⌫</button>
+                <button onclick="updateExpression('7')">7</button>
+                <button onclick="updateExpression('8')">8</button>
+                <button onclick="updateExpression('9')">9</button>
+                <button onclick="updateExpression('/')">/</button>
+                <button onclick="updateExpression('4')">4</button>
+                <button onclick="updateExpression('5')">5</button>
+                <button onclick="updateExpression('6')">6</button>
+                <button onclick="updateExpression('*')">x</button>
+                <button onclick="updateExpression('1')">1</button>
+                <button onclick="updateExpression('2')">2</button>
+                <button onclick="updateExpression('3')">3</button>
+                <button onclick="updateExpression('-')">-</button>
+                <button onclick="updateExpression('0')">0</button>
+                <button onclick="updateExpression('.')">.</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="updateExpression('+')">+</button>
+                <button onclick="updateExpression('Math.sin(')">sin</button>
+                <button onclick="updateExpression('Math.cos(')">cos</button>
+                <button onclick="updateExpression('Math.tan(')">tan</button>
+                <button onclick="updateExpression('Math.log(')">log</button>
+                <button onclick="updateExpression('Math.sqrt(')">√</button>
+                <button onclick="updateExpression('Math.pow(')">xⁿ</button>
             </div>
         </div>
     </body>
