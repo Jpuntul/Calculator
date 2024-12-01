@@ -5,38 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Calculator</title>
         <link rel="stylesheet" href="style.css">
-        <script>
-            let expression ='';
-            let history='';
-
-            function updateExpression(value) {
-                if (expression === '0')
-                    expression = ''; // Reset if initial value is 0
-                expression += value;
-                updateDisplay();
-            }
-
-             function clearExpression() {
-                history='';
-                expression = '';
-                updateDisplay();
-            }
-
-            function calculate() {
-                try {
-                // Safely evaluate the expression
-                history = expression
-                expression = eval(expression).toString();
-                } catch (error) {
-                    expression = 'Error';
-                }
-                updateDisplay();
-            }
-            function updateDisplay() {
-                document.getElementById('history').textContent = history || '';
-                document.getElementById('expression').textContent = expression || '0';
-            }
-        </script>
+        <script src="script.js"></script>
     </head>
     <body>
         <h1>Calculator</h1>
